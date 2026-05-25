@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plant Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🌱 Plant Disease Detection</h1>
+
+    <input type="file" id="imageInput">
+    
+    <br><br>
+
+    <img id="preview" width="200">
+
+    <br><br>
+
+    <button onclick="predictDisease()">Predict Disease</button>
+<p id="result"></p>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

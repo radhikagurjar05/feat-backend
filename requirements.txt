@@ -1,0 +1,8 @@
+Flask
+flask-cors
+tensorflow-cpu
+numpy
+pillow
+python-dotenv
+openai
+gunicorn

@@ -1,0 +1,172 @@
+{
+  "chili_cercospora": {
+    "cause": "Cercospora leaf spot is a fungal disease caused by Cercospora capsici. It spreads in warm and humid environments.",
+    "symptoms": [
+      "Brown circular spots on leaves",
+      "Yellow halo around spots",
+      "Leaves dry and fall early"
+    ],
+    "treatment": [
+      "Spray copper fungicide",
+      "Remove infected leaves",
+      "Maintain proper plant spacing"
+    ],
+    "prevention": [
+      "Avoid overhead irrigation",
+      "Use disease-free seeds",
+      "Ensure good air circulation"
+    ]
+  },
+
+  "chili_powdery_mildew": {
+    "cause": "Powdery mildew is a fungal disease caused by Leveillula taurica.",
+    "symptoms": [
+      "White powdery spots on leaves",
+      "Leaf curling",
+      "Reduced plant growth"
+    ],
+    "treatment": [
+      "Spray neem oil",
+      "Apply sulfur fungicide",
+      "Use potassium bicarbonate spray"
+    ],
+    "prevention": [
+      "Maintain proper sunlight",
+      "Avoid excess nitrogen fertilizer",
+      "Improve air circulation"
+    ]
+  },
+
+ "chili_mites_and_trips": {
+    "cause": "Mites and thrips insects feeding on chili plant sap.",
+    "symptoms": "Leaf curling, silvering of leaves, and stunted plant growth.",
+    "treatment": "Apply neem oil or recommended miticides/insecticides.",
+    "prevention": "Maintain proper plant hygiene and monitor pests regularly."
+  },
+
+"chili_healthy": {
+  "cause": "No disease detected; chili plant appears healthy.",
+  "symptoms": "Healthy green leaves and proper plant growth.",
+  "treatment": "No treatment required.",
+  "prevention": "Maintain balanced fertilization and regular watering."
+},
+
+"mango_anthracnose": {
+    "cause": "Anthracnose is a fungal disease caused by Colletotrichum gloeosporioides.",
+    "symptoms": [
+      "Black spots on mango leaves",
+      "Dark lesions on fruit",
+      "Premature fruit drop"
+    ],
+    "treatment": [
+      "Spray copper oxychloride",
+      "Remove infected fruits",
+      "Apply carbendazim spray"
+    ],
+    "prevention": [
+      "Prune infected branches",
+      "Improve orchard sanitation",
+      "Avoid excessive humidity"
+    ]
+  },
+
+"mango_sooty_mould": {
+    "cause": "Fungal growth that develops on honeydew secreted by insects such as aphids or scale insects.",
+    "symptoms": "Black powdery coating on mango leaves and branches.",
+    "treatment": "Wash leaves with mild soap solution and control insect pests.",
+    "prevention": "Manage aphids and other sap-sucking insects early."
+  },
+
+  "mango_healthy": {
+    "cause": "No disease detected; mango plant is healthy.",
+    "symptoms": "Green healthy leaves and normal plant development.",
+    "treatment": "No treatment required.",
+    "prevention": "Maintain balanced fertilization and proper irrigation."
+  },
+
+  "mango_powdery_mildew": {
+    "cause": "Fungal disease caused by Oidium mangiferae.",
+    "symptoms": "White powder-like growth on leaves, flowers, and fruits.",
+    "treatment": "Spray sulfur fungicide or potassium bicarbonate solution.",
+    "prevention": "Ensure proper air circulation and avoid high humidity conditions."
+  },
+
+  "mango_gall_midge": {
+    "cause": "Insect larvae that feed inside mango leaf tissues.",
+    "symptoms": "Leaf galls or swelling, distorted leaves, and reduced photosynthesis.",
+    "treatment": "Use recommended insecticides and prune affected leaves.",
+    "prevention": "Regular monitoring and removal of infected leaves."
+  },
+
+  "mango_die_back": {
+    "cause": "Fungal disease that attacks mango branches and shoots.",
+    "symptoms": "Drying of twigs and branches starting from the tip.",
+    "treatment": "Prune infected branches and apply copper fungicide.",
+    "prevention": "Maintain tree hygiene and avoid water stress."
+  },
+
+  "mango_cutting_weevil": {
+    "cause": "Weevil insects that damage mango leaves and stems.",
+    "symptoms": "Small holes in leaves and damaged plant tissues.",
+    "treatment": "Apply neem oil spray or recommended insecticides.",
+    "prevention": "Monitor orchards regularly and maintain field sanitation."
+  },
+
+  "mango_bacterial_canker": {
+    "cause": "Bacterial infection caused by Xanthomonas species.",
+    "symptoms": "Black lesions on leaves and fruit spots with cracks.",
+    "treatment": "Apply copper-based bactericides and remove infected parts.",
+    "prevention": "Use disease-free planting material and avoid plant injury."
+  },
+
+
+  "potato_nematode": {
+    "cause": "Root-knot nematodes infect potato roots and damage plant growth.",
+    "symptoms": "Yellowing leaves, stunted growth, root galls and reduced yield.",
+    "treatment": "Apply neem cake or recommended nematicides. Use biological control agents like Paecilomyces lilacinus.",
+    "prevention": "Use crop rotation, resistant potato varieties, and maintain healthy soil."
+  },
+
+  "potato_pest": {
+    "cause": "Potato pests such as aphids, beetles, and caterpillars feed on leaves and stems.",
+    "symptoms": "Holes in leaves, yellowing foliage, visible insects, and damaged plant growth.",
+    "treatment": "Apply neem oil spray or recommended insecticides. Remove infected plant parts.",
+    "prevention": "Regular field inspection, crop rotation, and use pest-resistant potato varieties."
+  },
+
+  "potato_phytophthora": {
+    "cause": "Late blight caused by the fungus-like organism Phytophthora infestans.",
+    "symptoms": "Dark brown patches on leaves, white fungal growth under leaves, rapid plant decay.",
+    "treatment": "Spray fungicides such as metalaxyl or chlorothalonil.",
+    "prevention": "Avoid excessive moisture, maintain good plant spacing, and remove infected plants."
+  },
+
+  "potato_virus": {
+    "cause": "Plant viruses transmitted mainly by aphids and infected planting material.",
+    "symptoms": "Mosaic leaf patterns, leaf curling, stunted plant growth, reduced yield.",
+    "treatment": "There is no cure for viral infection; remove infected plants immediately.",
+    "prevention": "Use certified disease-free seeds and control aphid populations."
+  },
+
+  "potato_healthy": {
+    "cause": "No disease detected; plant appears healthy.",
+    "symptoms": "Healthy green leaves and normal plant growth.",
+    "treatment": "No treatment required.",
+    "prevention": "Maintain proper irrigation, sunlight exposure, and soil nutrition."
+  },
+
+  "potato_fungi": {
+    "cause": "Fungal infections caused by soilborne fungi affecting potato plants.",
+    "symptoms": "Leaf spots, discoloration, wilting, and rotting of plant tissues.",
+    "treatment": "Apply recommended fungicides and remove infected plant parts.",
+    "prevention": "Practice crop rotation and avoid excessive soil moisture."
+  },
+
+  "potato_bacteria": {
+    "cause": "Bacterial pathogens infect potato plants through wounds or contaminated soil.",
+    "symptoms": "Soft rot, black stem lesions, wilting leaves, and foul odor in infected tissue.",
+    "treatment": "Remove infected plants and apply copper-based bactericides.",
+    "prevention": "Use certified seeds and maintain proper field sanitation."
+  }
+}
+
