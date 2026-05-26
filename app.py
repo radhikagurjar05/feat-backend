@@ -5,17 +5,21 @@ import numpy as np
 from PIL import Image
 import json
 import os
+import io
 import openai
 import sqlite3
 from datetime import datetime
+from threading import Lock
 from dotenv import load_dotenv
 from werkzeug.utils import secure_filename
 
+# Load environment variables before reading keys
+load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # ================= SETUP =================
-load_dotenv()
 app = Flask(__name__)
+app.config["MAX_CONTENT_LENGTH"] = 10 * 1024 * 1024  # 10 MB upload limit
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 
@@ -35,6 +39,10 @@ classes = {v: k for k, v in class_indices.items()}
 
 with open(info_path, "r") as f:
     disease_info = json.load(f)
+
+static_folder = os.path.join(base_dir, "static")
+os.makedirs(static_folder, exist_ok=True)
+prediction_lock = Lock()
 
 # ================= HOME =================
 @app.route('/')
@@ -83,14 +91,7 @@ def predict():
         file = request.files.get('file')
 
         if not file:
-            return jsonify({"error": "No file uploaded"})
-
-        #  Correct static path
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-        static_folder = os.path.join(base_dir, "static")
-
-        if not os.path.exists(static_folder):
-            os.makedirs(static_folder)
+            return jsonify({"error": "No file uploaded"}), 400
 
         # 🔥 Safe filename
         safe_name = secure_filename(file.filename)
@@ -102,21 +103,25 @@ def predict():
         filename = str(int(datetime.now().timestamp())) + ext
         filepath = os.path.join(static_folder, filename)
 
-        #  Save image
-        file.save(filepath)
-        print(" Saved:", filepath)
-
-        #  Read image from saved file
-        img = Image.open(filepath).convert('RGB')
+        #  Load image from memory first, then save to disk for later display
+        file_bytes = file.read()
+        img = Image.open(io.BytesIO(file_bytes)).convert('RGB')
         img = img.resize((224, 224))
         img = np.array(img)
         img = tf.keras.applications.efficientnet.preprocess_input(img)
         img = np.expand_dims(img, axis=0)
 
-        prediction = disease_model.predict(img)
+        #  Run prediction under a global lock to avoid TensorFlow thread contention
+        with prediction_lock:
+            prediction = disease_model.predict(img)
 
         predicted_index = int(np.argmax(prediction))
         confidence = float(np.max(prediction)) * 100
+
+        #  Save original upload after prediction
+        file.stream.seek(0)
+        file.save(filepath)
+        print(" Saved:", filepath)
 
         if confidence < 50.0:
             return jsonify({"error": "Invalid image, not leaf image"})
